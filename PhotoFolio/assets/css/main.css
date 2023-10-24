@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #27a776;
+  --color-primary: #990000;
   --color-secondary: #161718;
 }
 
@@ -294,23 +294,10 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 40px;
+  max-height: 50px;
   margin-right: 8px;
 }
 
-.header .logo h1 {
-  font-size: 32px;
-  margin: 0;
-  font-weight: 400;
-  color: #fff;
-  font-family: var(--font-secondary);
-}
-
-.header .logo i {
-  font-size: 32px;
-  margin-right: 8px;
-  line-height: 0;
-}
 
 @media (max-width: 575px) {
   .header .logo h1 {
@@ -1157,7 +1144,7 @@ h6 {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgba(39, 167, 118, 0.8);
+  background: #990000;
 }
 
 @keyframes animate-loading {
@@ -1229,7 +1216,7 @@ h6 {
 }
 
 .hero .btn-get-started:hover {
-  background: #2cbc85;
+  background: #990000;
 }
 
 @media (max-width: 768px) {
