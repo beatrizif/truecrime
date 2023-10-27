@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #fafafa;
-  --color-primary: #990000;
+  --color-primary: #960404;
   --color-secondary: #161718;
 }
 
@@ -81,7 +81,7 @@ h6 {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #5bd9a9;
+  background: #960404;
   margin: 4px 10px;
 }
 
@@ -1163,7 +1163,7 @@ h6 {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #990000;
+  background: #960404;
 }
 
 @keyframes animate-loading {
@@ -1235,7 +1235,7 @@ h6 {
 }
 
 .hero .btn-get-started:hover {
-  background: #990000;
+  background: #960404;
 }
 
 @media (max-width: 768px) {
