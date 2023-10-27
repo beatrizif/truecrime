@@ -357,6 +357,19 @@ h6 {
     position: relative;
   }
 
+  #alta{
+    justify-content: space-between;
+    padding: 0 0 8px 11px;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
   .navbar a,
   .navbar a:focus {
     display: flex;
@@ -384,7 +397,8 @@ h6 {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: #a00404;
+
   }
 
   .navbar .dropdown ul {
