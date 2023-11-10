@@ -1,41 +1,19 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+$P1 = $_POST['P1'];
+$P2 = $_POST['P2'];
+$P3 = $_POST['P3'];
+$P4 = $_POST['P4'];
+$P5 = $_POST['P5'];
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+$conn = new PDO('mysql:host=127.0.0.1:3306;dbname=db_truecrime', 'root', 'mjsm2004');
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+try{ 
+$stmt = $conn->prepare("INSERT INTO tb_avaliacoes (P1, P2, P3,P4,P5)
+ VALUES ('".$P1."', '".$P2."', '".$P3."', '".$P4."', '".$P5."' );");
+$stmt->execute();
+echo "<center><h1> Registro de bioma concluído </h1></center>  <a href='/'><button class='btn btn-info'>Home</button></a>";
+} catch(PDOException $e) {
+    echo "<br>" . $e->getMessage();
   }
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
 ?>
